@@ -1,6 +1,6 @@
 #  RT02 Online Marketplace
 
-Aplikasi web e-commerce *Full-Stack* modern yang dirancang untuk katalog produk dan sistem keranjang belanja. Proyek ini dibangun menggunakan arsitektur Monorepo yang memisahkan layanan Backend API dan Frontend secara rapi, serta di-deploy secara penuh di cloud menggunakan platform Vercel dan MongoDB Atlas.
+Aplikasi web e-commerce *Full-Stack* modern yang dirancang untuk katalog produk dan sistem keranjang belanja.
 
 ---
 
@@ -10,32 +10,30 @@ Aplikasi web e-commerce *Full-Stack* modern yang dirancang untuk katalog produk 
 
 ---
 
-##  Fitur Utama
-* **Autentikasi Pengguna:** Sistem Registrasi dan Login aman menggunakan *JSON Web Token* (JWT).
-* **Katalog Produk Dinamis:** Menampilkan daftar produk estetik yang ditarik langsung dari database cloud MongoDB dengan performa *loading state* (spinner) yang halus.
-* **Halaman Detail Produk:** Menggunakan *dynamic routing* untuk menyajikan deskripsi lengkap, harga, dan sisa stok produk secara real-time.
-* **Keranjang Belanja:** Manajemen *state* keranjang menggunakan React Context API yang tersinkronisasi langsung dengan database pengguna.
-* **Layout Responsif:** Tampilan katalog menggunakan sistem **CSS Grid modern** dengan proteksi rasio gambar (`object-fit: cover`) sehingga rapi di layar HP maupun laptop.
+## Fitur Utama
+* **Autentikasi Pengguna:** Sistem registrasi dan login aman yang dilindungi menggunakan *JSON Web Token* (JWT).
+* **Katalog Produk Dinamis:** Menampilkan daftar produk secara real-time.
+* **Halaman Detail Produk:** Menggunakan *dynamic routing* untuk menyajikan deskripsi lengkap, harga, dan sisa stok produk secara akurat.
+* **Keranjang Belanja:** Manajemen *state* keranjang menggunakan React Context API yang terintegrasi dan tersinkronisasi otomatis dengan database pengguna.
 
 ---
 
 ##  Teknologi yang Digunakan
 
 ### **Frontend**
-* **React.js** (ditopang oleh **Vite** sebagai *build tool* yang super cepat)
-* **React Router DOM** (Manajemen rute halaman *Single Page Application*)
-* **Axios** (Pustaka HTTP Client untuk menjembatani komunikasi ke API backend)
-* **CSS3** (Kustomisasi desain grid, transisi kartu, dan animasi spinner)
+* **React.js**
+* **React Router DOM** 
+* **Axios** 
 
 ### **Backend & Database**
-* **Node.js** & **Express.js** (RESTful API Server)
-* **MongoDB Atlas** (Cloud NoSQL Database)
-* **Mongoose** (Object Data Modeling untuk skema basis data)
-* **JSON Web Token (JWT)** (Keamanan token login)
+* **Node.js** & **Express.js**
+* **MongoDB Atlas** 
+* **Mongoose**
+* **JSON Web Token (JWT)** 
 
 ---
 
-##  Struktur Folder Proyek (Monorepo)
+##  Struktur Folder
 ```text
 online-marketplace-app/
 ├── backend/
