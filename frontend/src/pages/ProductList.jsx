@@ -1,46 +1,60 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import api from '../services/api';
-import '../style/Products.css';
+import { Link } from 'react-router-dom';
+import '../style/Products.css'; 
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
-  
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const { data } = await api.get('/products');
-        setProducts(data);
-      } catch (error) {
-        console.error("Gagal mengambil data produk", error);
+        setLoading(true); 
+        const response = await api.get('/products');
+        setProducts(response.data);
+      } catch (err) {
+        console.error(err);
+        setError('Gagal memuat produk. Silakan coba lagi nanti.');
+      } finally {
+        setLoading(false); 
       }
     };
+
     fetchProducts();
   }, []);
 
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <div className="loading-spinner"></div>
+        <p>Memuat produk estetik untukmu...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return <div className="error-container">{error}</div>;
+  }
+
   return (
-    <div>
-      <h2>Katalog Peralatan Rumah Tangga</h2>
+    <div className="product-page">
+      <h2>Katalog Produk</h2>
       <div className="product-grid">
         {products.map((product) => (
           <div key={product._id} className="product-card">
-            <div className="product-img-container">
-              {product.imageUrl ? (
-                <img 
-                  src={`${BACKEND_URL}${product.imageUrl}`} 
-                  alt={product.name} 
-                  className="product-img" 
-                />
-              ) : (
-                <div className="product-img-placeholder">Tidak Ada Gambar</div>
-              )}
-            </div>
-
+            <img 
+              src={`${BACKEND_URL}${product.image}`} 
+              alt={product.name} 
+            />
             <h3>{product.name}</h3>
-            <p>Rp {product.price.toLocaleString('id-ID')}</p>
-            <Link to={`/products/${product._id}`} className="view-btn">Lihat Detail</Link>
+            <p className="price">Rp {product.price.toLocaleString('id-ID')}</p>
+            <Link to={`/products/${product._id}`} className="btn-detail">
+              Lihat Detail
+            </Link>
           </div>
         ))}
       </div>
