@@ -8,8 +8,6 @@ const ProductList = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
-
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -31,7 +29,7 @@ const ProductList = () => {
     return (
       <div className="loading-container">
         <div className="loading-spinner"></div>
-        <p>Memuat produk</p>
+        <p>Memuat produk...</p>
       </div>
     );
   }
@@ -47,7 +45,7 @@ const ProductList = () => {
         {products.map((product) => (
           <div key={product._id} className="product-card">
             <img 
-              src={`${BACKEND_URL}${product.image}`} 
+              src={product.image} 
               alt={product.name} 
             />
             <h3>{product.name}</h3>
