@@ -55,52 +55,5 @@ online-marketplace-app/
 │   │   ├── pages/       # Komponen halaman (ProductList, ProductDetail)
 │   │   └── services/    # Konfigurasi Axios API client
 │   └── vercel.json      # Aturan rewrites React Router untuk Vercel
-└── .gitignore           # Penyaring file rahasia (.env & node_modules)
+└── .gitignore           
 
-
-💻 Panduan Menjalankan Proyek di Lokal (Development)
-1. Persiapan Awal
-Pastikan Anda sudah menginstal Node.js.
-
-Clone repositori ini ke komputer Anda.
-
-2. Pengaturan Backend
-Masuk ke folder backend:
-
-Bash
-cd backend
-Instal semua dependensi:
-
-Bash
-npm install
-Buat file .env di dalam folder backend/ dan isi sebagai berikut:
-
-Code snippet
-PORT=5000
-MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/marketplace_db?retryWrites=true&w=majority
-JWT_SECRET=rahasiasuperamanrt02
-(Opsional) Jalankan skrip seeder untuk mengisi database produk tiruan pertama kali:
-
-Bash
-node seeder.js
-Jalankan server backend lokal:
-
-Bash
-npm start
-3. Pengaturan Frontend
-Buka terminal baru dan masuk ke folder frontend:
-
-Bash
-cd frontend
-Instal semua dependensi:
-
-Bash
-npm install
-Buat file .env di dalam folder frontend/ dan isi sebagai berikut:
-
-Code snippet
-VITE_API_URL=http://localhost:5000/api
-Jalankan aplikasi frontend lokal:
-
-Bash
-npm run dev
