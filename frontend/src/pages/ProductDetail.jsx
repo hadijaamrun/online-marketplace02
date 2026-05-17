@@ -54,9 +54,9 @@ const ProductDetail = () => {
       <div className="product-detail-card">
         
         <div className="detail-image-section">
-          {product && product.image ? (
+          {product && (product.imageUrl || product.image) ? (
             <img 
-              src={product.image} 
+              src={product.imageUrl || product.image} 
               alt={product.name} 
               className="detail-image" 
             />
