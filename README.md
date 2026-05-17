@@ -1,17 +1,16 @@
-# online-marketplace02
-# 🛒 RT02 Online Marketplace
+#  RT02 Online Marketplace
 
 Aplikasi web e-commerce *Full-Stack* modern yang dirancang untuk katalog produk dan sistem keranjang belanja. Proyek ini dibangun menggunakan arsitektur Monorepo yang memisahkan layanan Backend API dan Frontend secara rapi, serta di-deploy secara penuh di cloud menggunakan platform Vercel dan MongoDB Atlas.
 
 ---
 
-## 🚀 Demo Live
+##  Demo Live
 * **Frontend Web:** [https://online-marketplace02-bwri.vercel.app](https://online-marketplace02-bwri.vercel.app)
 * **Backend API:** [https://online-marketplace02.vercel.app](https://online-marketplace02.vercel.app)
 
 ---
 
-## ✨ Fitur Utama
+##  Fitur Utama
 * **Autentikasi Pengguna:** Sistem Registrasi dan Login aman menggunakan *JSON Web Token* (JWT).
 * **Katalog Produk Dinamis:** Menampilkan daftar produk estetik yang ditarik langsung dari database cloud MongoDB dengan performa *loading state* (spinner) yang halus.
 * **Halaman Detail Produk:** Menggunakan *dynamic routing* untuk menyajikan deskripsi lengkap, harga, dan sisa stok produk secara real-time.
@@ -20,7 +19,7 @@ Aplikasi web e-commerce *Full-Stack* modern yang dirancang untuk katalog produk 
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+##  Teknologi yang Digunakan
 
 ### **Frontend**
 * **React.js** (ditopang oleh **Vite** sebagai *build tool* yang super cepat)
@@ -36,7 +35,7 @@ Aplikasi web e-commerce *Full-Stack* modern yang dirancang untuk katalog produk 
 
 ---
 
-## 📂 Struktur Folder Proyek (Monorepo)
+##  Struktur Folder Proyek (Monorepo)
 ```text
 online-marketplace-app/
 ├── backend/
