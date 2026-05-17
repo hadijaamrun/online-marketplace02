@@ -6,7 +6,7 @@ Aplikasi web e-commerce *Full-Stack* modern yang dirancang untuk katalog produk 
 
 ##  Demo Live
 * **Frontend Web:** [https://online-marketplace02-bwri.vercel.app](https://online-marketplace02-bwri.vercel.app)
-* **Backend API:** [https://online-marketplace02.vercel.app](https://online-marketplace02.vercel.app)
+* **Backend API:** [https://online-marketplace02.vercel.app/api/products](https://online-marketplace02.vercel.app/api/products)
 
 ---
 
