@@ -31,7 +31,7 @@ const ProductList = () => {
     return (
       <div className="loading-container">
         <div className="loading-spinner"></div>
-        <p>Memuat produk estetik untukmu...</p>
+        <p>Memuat produk</p>
       </div>
     );
   }
