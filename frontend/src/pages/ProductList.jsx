@@ -6,7 +6,7 @@ import '../style/Products.css';
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   
-  const BACKEND_URL = "http://localhost:5000"; 
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
 
   useEffect(() => {
     const fetchProducts = async () => {
