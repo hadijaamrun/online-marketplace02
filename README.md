@@ -33,24 +33,34 @@ Aplikasi web e-commerce *Full-Stack* modern yang dirancang untuk katalog produk 
 
 ---
 
-##  Struktur Folder
+## Struktur Folder 
+
+Proyek ini menggunakan arsitektur Monorepo yang memisahkan antara sistem *backend* (API) dan *frontend* (User Interface) dengan struktur direktori sebagai berikut:
+
+## Struktur Folder 
+
 ```text
 online-marketplace-app/
 ├── backend/
-│   ├── config/          # Konfigurasi koneksi MongoDB
-│   ├── controllers/     # Logika bisnis (Auth, Cart, Product)
-│   ├── models/          # Skema Mongoose (User, Product, Cart)
-│   ├── routes/          # Endpoint REST API
-│   ├── vercel.json      # Konfigurasi serverless backend Vercel
-│   ├── seeder.js        # Skrip injeksi data produk awal
-│   └── server.js        # Titik masuk utama server Express
-├── frontend/
-│   ├── public/uploads/  # Penyimpanan file gambar produk statis
-│   ├── src/
-│   │   ├── components/  # Komponen UI global
-│   │   ├── context/     # Global state management (Cart)
-│   │   ├── pages/       # Komponen halaman (ProductList, ProductDetail)
-│   │   └── services/    # Konfigurasi Axios API client
-│   └── vercel.json      # Aturan rewrites React Router untuk Vercel
-└── .gitignore           
-
+│   ├── config/
+│   ├── controllers/
+│   ├── middlewares/
+│   ├── models/
+│   ├── public/
+│   ├── routes/
+│   ├── utils/
+│   ├── seeder.js
+│   └── server.js
+│
+└── frontend/
+    ├── public/
+    ├── src/
+    │   ├── assets/
+    │   ├── components/
+    │   ├── context/
+    │   ├── pages/
+    │   ├── services/
+    │   ├── style/
+    │   ├── App.jsx
+    │   └── main.jsx
+    └── index.html
