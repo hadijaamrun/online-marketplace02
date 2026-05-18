@@ -37,8 +37,6 @@ Aplikasi web e-commerce *Full-Stack* modern yang dirancang untuk katalog produk 
 
 Proyek ini menggunakan arsitektur Monorepo yang memisahkan antara sistem *backend* (API) dan *frontend* (User Interface) dengan struktur direktori sebagai berikut:
 
-## Struktur Folder 
-
 ```text
 online-marketplace-app/
 ├── backend/
